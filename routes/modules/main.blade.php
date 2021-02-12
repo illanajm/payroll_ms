@@ -1,7 +1,5 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
 use App\Http\Controllers\dashboardController;
 
 /*
@@ -20,4 +18,4 @@ use App\Http\Controllers\dashboardController;
 // });
 
 
-Route::get('login',[LoginController::class,'index'])->name('form.login');
+Route::get('/main',[dashboardController::class,'index'])->name('dashboard.main');
