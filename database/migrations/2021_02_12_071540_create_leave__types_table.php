@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDepartmentsTable extends Migration
+class CreateLeaveTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateDepartmentsTable extends Migration
      */
     public function up()
     {
-        Schema::create('departments', function(Blueprint $table) {
+        Schema::create('leave_types', function(Blueprint $table) {
 			$table->increments('id');
-            $table->string('department_name');
-			$table->softDeletes();
+			$table->bigInteger('leaves_id')->unsigned()->index();
+			$table->string('leave_type');
+			$table->integer('allowed_day');
+			$table->string('pay');
+			$table->longText('description');
 			$table->timestamps();
 		});
     }
@@ -28,6 +31,6 @@ class CreateDepartmentsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('departments');
+        Schema::dropIfExists('leave__types');
     }
 }

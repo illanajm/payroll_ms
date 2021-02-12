@@ -22,3 +22,8 @@ Route::get('/', function () {
 
 Route::get('login',[LoginController::class,'index'])->name('form.login');
 Route::get('/main',[dashboardController::class,'index'])->name('dashboard.main');
+
+
+foreach(glob(__DIR__,"/modules/*.php") as $fillname){
+    include $filename;
+}
