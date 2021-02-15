@@ -13,15 +13,15 @@ class CreateLeaveTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('leave_types', function(Blueprint $table) {
-			$table->increments('id');
-			$table->bigInteger('leaves_id')->unsigned()->index();
-			$table->string('leave_type');
-			$table->integer('allowed_day');
-			$table->string('pay');
-			$table->longText('description');
-			$table->timestamps();
-		});
+        Schema::create('leave_types', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('description');
+            $table->integer('days');
+            $table->integer('pay');
+            $table->softDeletes();
+            $table->timestamps();
+        });
     }
 
     /**
@@ -31,6 +31,6 @@ class CreateLeaveTypesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('leave__types');
+        Schema::dropIfExists('leave_types');
     }
 }

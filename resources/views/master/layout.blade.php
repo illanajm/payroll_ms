@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600" > 
     <link rel="stylesheet" href="{{URL::asset('assets/css/bundle.css')}}">
+    
 
 </head>
 <body class="o-page">

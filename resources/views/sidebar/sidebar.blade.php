@@ -1,7 +1,7 @@
 <div class="o-page__sidebar js-page-sidebar">
     <div class="c-sidebar">
         <a class="c-sidebar__brand"> 
-            <img class="c-sidebar__brand-img" src="..." alt="Logo" style="width: 50%; margin-left: 15%;"> 
+            <img class="c-sidebar__brand-img" src="http://xsodia.space/payroll/assets/logo.png" alt="Logo" style="width: 50%; margin-left: 15%;"> 
         </a>
         
         <h4 class="c-sidebar__title">Dashboard</h4>
@@ -18,8 +18,8 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Departments
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_2">
-                    <li><a class="c-sidebar__link" href="...">All Departments</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Add Departments</a></li>                                         
+                    <li><a class="c-sidebar__link" href="{{URL::route('department.index')}}">All Departments</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('department.add')}}">Add Departments</a></li>                                         
                 </ul>
             </li>
 
@@ -39,8 +39,8 @@
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_4">
                     <li><a class="c-sidebar__link" href="...">All loans</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Loan Types</a></li>
-                    <li><a class="c-sidebar__link" href="...">Add Loan Types</a></li>                                          
+                    <li><a class="c-sidebar__link" href="{{URL::route('loan.index')}}">Loan Types</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('loan.add')}}">Add Loan Types</a></li>                                          
                 </ul>
             </li>
 

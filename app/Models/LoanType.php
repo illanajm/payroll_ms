@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Leave_Type extends Model
+class LoanType extends Model
 {
     use HasFactory;
     use SoftDeletes;
     protected $fillable = [
-        'name',
+        'loan_type',
         'description',
-        'days',
-        'pay',
         'deleted_at'
     ];
 }

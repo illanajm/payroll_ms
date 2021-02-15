@@ -5,4 +5,4 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\dashboardController;
 
 
-Route::get('login',[LoginController::class,'index'])->name('form.login');
+Route::get('/',[LoginController::class,'index'])->name('form.login');
