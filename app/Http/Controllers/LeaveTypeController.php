@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\LeaveType;
-use App\Models\Leave_Type;
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Repositories\Interfaces\LeaveRepositoryInterface;

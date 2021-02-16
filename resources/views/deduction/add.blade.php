@@ -2,15 +2,7 @@
 @section('content')
 @include('sidebar.sidebar')
 <main class="o-page__content" style="padding-bottom: 5%;"> 
-    <header class="c-navbar">
-        <button class="c-sidebar-toggle u-mr-small">
-            <span class="c-sidebar-toggle__bar"></span>
-            <span class="c-sidebar-toggle__bar"></span>
-            <span class="c-sidebar-toggle__bar"></span>
-        </button> 
-
-        <h2 class="c-navbar__title u-mr-auto">PAYROLL MANAGEMENT SYSTEM</h2> 
-    </header> 
+    @include('navbar.header')
     <div class="container-fluid" style="margin:1%; padding:1%; width:98%; margin-top: 2%; background-color: white;">
         <div class="row">
             <div class="col-lg-12 col-md-12">
@@ -24,13 +16,13 @@
                 </div> 
             </div> 
             <div class="col-lg-12 col-md-12" style="padding: 2%;"> 
-                <form method="post" action=""> 
-                    <input type="hidden" name="" value="">
+                <form method="post" action="{{URL::route('deduction.store')}}"> 
+                    @csrf
                     <div class="row">  
                         <div class="col-sm-4 col-md-4 u-mb-medium">
                             <div class="c-field">
                                 <label class="c-field__label" for="input18">Contribution type</label>
-                                <select class="c-select select2-hidden-accessible" id="select1" name="type" required="" data-select2-id="select1" tabindex="-1" aria-hidden="true">
+                                <select class="c-select" name="contribution">
                                     <option value="tax" data-select2-id="2">Tax</option>
                                     <option value="sss">SSS</option>
                                     <option value="philhealth">Philhealth</option>
@@ -41,7 +33,7 @@
                         <div class="col-sm-8 col-md-8 u-mb-medium">
                             <div class="c-form-field">
                                 <label class="c-field__label" for="input17">Base Range</label>
-                                <input class="c-input c-input--info" id="input17" type="text" required="" name="base_range">
+                                <input class="c-input " type="number" required="" name="base">
                             </div>
                         </div> 
                         <div class="col-sm-4 col-md-4 u-mb-medium">
@@ -67,13 +59,7 @@
                             <span class="c-divider u-mv-medium"></span>
                         </div>
 
-                        <div class="col-sm-2 col-md-2 u-mb-medium">
-                            <div class="c-field">
-                                <div class="col u-mb-medium">
-                                    <button class="c-btn c-btn--info">Save</button>
-                                </div>
-                            </div>
-                        </div> 
+                        @include('button.button_save')
                     </div> 
                 </form> 
             </div> 

@@ -15,11 +15,12 @@ class CreateDeductionsTable extends Migration
     {
         Schema::create('deductions', function (Blueprint $table) {
             $table->id();
-            $table->string('contribution_type');
-            $table->integer('base_range')->nullable();
+            $table->string('contribution');
+            $table->integer('base')->nullable();
             $table->integer('monthly');
             $table->integer('employee');
             $table->integer('employer');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

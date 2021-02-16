@@ -12,8 +12,8 @@ class Deduction extends Model
     use SoftDeletes;
 
     protected $fillable = [
-        'contribution_type',
-        'base_range',
+        'contribution',
+        'base',
         'monthly',
         'employee',
         'employer',

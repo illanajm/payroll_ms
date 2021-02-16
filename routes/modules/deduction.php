@@ -6,4 +6,5 @@ use App\Http\Controllers\DeductionController;
 
 Route::group(['prefix' => '/deductions'],function(){
     Route::get('/add',[DeductionController::class,'add'])->name('deduction.add');
+    Route::post('/add',[DeductionController::class,'store'])->name('deduction.store');
 });

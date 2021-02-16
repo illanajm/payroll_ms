@@ -33,15 +33,15 @@
                         </thead>
 
                         <tbody>
-
+                            @foreach($data as $d)
                              <tr class="c-table__row">             
-                            <td class="c-table__cell"><b>id</b></td>  
-                            <td class="c-table__cell">12,999 - above</td>   
-                            <td class="c-table__cell">123123%</td>  
-                            <td class="c-table__cell">123123%</td>  
-                            <td class="c-table__cell">123123%</td>  
-                            <td class="c-table__cell">2 days ago</td>  
-                            <td class="c-table__cell">2 days ago</td>  
+                            <td class="c-table__cell"><b>{{$d->id}}</b></td>  
+                            <td class="c-table__cell">{{$d->base}}</td>   
+                            <td class="c-table__cell">{{$d->monthly}}</td>  
+                            <td class="c-table__cell">{{$d->employee}}</td>  
+                            <td class="c-table__cell">{{$d->employer}}</td>  
+                            <td class="c-table__cell">{{$d->created_at}}</td>  
+                            <td class="c-table__cell">{{$d->updated_at}}</td>  
                             <td class="c-table__cell">
                             <div class="c-dropdown dropdown">
                                     <button class="c-btn c-btn--info has-dropdown dropdown-toggle" id="dropdownMenuButton21" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
@@ -52,7 +52,8 @@
                                 </div>
                             </td>
                           
-                            </tr>       
+                            </tr>    
+                            @endforeach   
                         </tbody>
                     </table> 
                 </div> 
