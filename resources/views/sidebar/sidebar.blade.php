@@ -50,8 +50,8 @@
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_5">
                     <li><a class="c-sidebar__link" href="...">All leaves</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Leave Types</a></li>
-                    <li><a class="c-sidebar__link" href="...">Add Leave Types</a></li>                                          
+                    <li><a class="c-sidebar__link" href="{{URL::route('leave.index')}}">Leave Types</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('leave.store_form')}}">Add Leave Types</a></li>                                          
                 </ul>
             </li>
 

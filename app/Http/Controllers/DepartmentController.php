@@ -5,16 +5,18 @@ namespace App\Http\Controllers;
 use App\Models\Department;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use App\Repositories\Interfaces\DepartmentRepositoryInterface;
 
 class DepartmentController extends Controller
 
 {
+    private $DepartmentRepository;
     protected $department;
     protected $request;
 
-    public function __construct(Department $department, Request $request)
+    public function __construct(DepartmentRepositoryInterface $DepartmentRepository, Request $request)
     {
-        $this->department = $department;
+        $this->department = $DepartmentRepository;
         $this->request = $request;
     }
 
@@ -26,6 +28,11 @@ class DepartmentController extends Controller
         ]);
     }
 
+    public function show($id)
+    {
+        return $this->model->show($id);
+    }
+
     public function add()
     {
         return view('department.add');
@@ -33,10 +40,10 @@ class DepartmentController extends Controller
 
     public function store()
     {
-        $this->department->create($this->request->except('_token'));
-        return Redirect::route('department.index')->with([
-            'success'=>'department added'
-        ]);
+       $department =  $this->department->create($this->request->except('_token'));
+       return Redirect::route('department.index')->with([
+        'success'=>'data has been updated'
+    ]);
     }
 
     public function update_form($id)
@@ -47,15 +54,22 @@ class DepartmentController extends Controller
 
     public function update($id)
     {
-        $this->department->find($id)->update($this->request->except('_token'));
-        return Redirect::route('department.index')->with([
-            'success'=>'data has been updated'
-        ]);
+        try{ 
+            $message = $this->department->update($id) ? [
+                'success'=>'data has been updated'
+            ] : [
+                'error'=>'error'
+            ];
+            
+            return Redirect::route('department.index')->with($message);
+        }catch(Exception $e){
+            abort(500);
+        }
     }
 
     public function delete($id)
     {
-        $this->department->findorfail($id)->delete();
+        $this->department->delete($id);
         return Redirect::route('department.index')->with([
             'success'=>'data has been deleted'
         ]);
