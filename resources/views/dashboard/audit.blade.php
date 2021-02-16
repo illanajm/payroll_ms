@@ -12,29 +12,8 @@
 
         <h2 class="c-navbar__title u-mr-auto">PAYROLL MANAGEMENT SYSTEM</h2> 
     </header> 
-    <div class="c-toolbar u-justify-center u-mb-small">
-        <div class="col-12 col-lg-10 col-xl-8">
-            <div class="row">
-                <div class="col-6 col-md-3 c-toolbar__state">
-                    <h4 class="c-toolbar__state-number">1</h4>
-                    <span class="c-toolbar__state-title">Employees</span>
-                </div>
-                <div class="col-6 col-md-3 c-toolbar__state">
-                    <h4 class="c-toolbar__state-number">1</h4>
-                    <span class="c-toolbar__state-title">Leaves</span>
-                </div>
-                <div class="col-6 col-md-3 c-toolbar__state">
-                    <h4 class="c-toolbar__state-number">1</h4>
-                    <span class="c-toolbar__state-title">Loans</span>
-                </div>
-                <div class="col-6 col-md-3 c-toolbar__state">
-                    <h4 class="c-toolbar__state-number">0</h4>
-                    <span class="c-toolbar__state-title">Deductions</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
+    
+    <div class="container-fluid" style="margin:1%; padding:1%; width:98%; margin-top: 2%; background-color: white;">
         <div class="row">
             <div class="col-lg-12 col-md-12">
                 <div class="c-table-responsive@desktop">

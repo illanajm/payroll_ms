@@ -7,14 +7,14 @@
         <h4 class="c-sidebar__title">Dashboard</h4>
         <ul class="c-sidebar__list">  
             <li class="c-sidebar__item active">
-                <a class="c-sidebar__link" href="...">
+                <a class="c-sidebar__link" href="{{URL::route('dashboard.main')}}">
                     <i class="fa fa-home u-mr-xsmall"></i>
                     Dashboard
                 </a>
             </li>  
 
             <li class="c-sidebar__item">
-                <a class="c-sidebar__link" href="...">
+                <a class="c-sidebar__link" href="{{URL::route('dashboard.audit')}}">
                     <i class="fa fa-home u-mr-xsmall"></i>
                     Audit Trail
                 </a>
@@ -35,8 +35,8 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Employees
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_3">
-                    <li><a class="c-sidebar__link" href="...">Records</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Add New</a></li>                                         
+                    <li><a class="c-sidebar__link" href="{{URL::route('employee.index')}}">Records</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('employee.add')}}">Add New</a></li>                                         
                 </ul>
             </li>
 
@@ -45,8 +45,8 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Loans
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_4">
-                    <li><a class="c-sidebar__link" href="...">All loans</a></li> 
-                    <li><a class="c-sidebar__link" href="{{URL::route('loan.index')}}">Loan Types</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('loan.index')}}">All loans</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('loan.types')}}">Loan Types</a></li>
                     <li><a class="c-sidebar__link" href="{{URL::route('loan.add')}}">Add Loan Types</a></li>                                          
                 </ul>
             </li>
