@@ -13,11 +13,6 @@ use App\Http\Controllers\dashboardController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-
 Route::get('/main',[dashboardController::class,'index'])->name('dashboard.main');
 
 Route::get('/audit',[dashboardController::class,'audit'])->name('dashboard.audit');
