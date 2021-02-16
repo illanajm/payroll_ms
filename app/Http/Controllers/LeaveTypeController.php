@@ -25,6 +25,14 @@ class LeaveTypeController extends Controller
         ]);
     }
 
+    public function types()
+    {
+        $data = $this->leavetype->all();
+        return view('leave.types',[
+            'leave' => $data
+        ]);
+    }
+
     public function store_form()
     {
         return view('leave.add');

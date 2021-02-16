@@ -56,8 +56,8 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Leaves
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_5">
-                    <li><a class="c-sidebar__link" href="...">All leaves</a></li> 
-                    <li><a class="c-sidebar__link" href="{{URL::route('leave.index')}}">Leave Types</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('leave.index')}}">All leaves</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('leave.types')}}">Leave Types</a></li>
                     <li><a class="c-sidebar__link" href="{{URL::route('leave.store_form')}}">Add Leave Types</a></li>                                          
                 </ul>
             </li>
@@ -80,8 +80,8 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Timekeeping
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_7">
-                    <li><a class="c-sidebar__link" href="...">Records</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Add New</a></li>                                     
+                    <li><a class="c-sidebar__link" href="{{URL::route('timekeeping.index')}}">Records</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('timekeeping.add')}}">Add New</a></li>                                     
                 </ul>
             </li>
 
@@ -90,8 +90,8 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Payslips
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_8">
-                    <li><a class="c-sidebar__link" href="...">Records</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Process Payroll</a></li>                                     
+                    <li><a class="c-sidebar__link" href="{{URL::route('payslip.index')}}">Records</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('payslip.process')}}">Process Payroll</a></li>                                     
                 </ul>
             </li>
 
