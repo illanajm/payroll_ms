@@ -12,7 +12,7 @@ class DeductionController extends Controller
     protected $deduction;
     protected $request;
     
-    public function __construct(Deduction $deduction, Request $request)
+    public function __construct(DeductionRepositoryInterface $deduction, Request $request)
     {
         $this->deduction = $deduction;
         $this->request = $request;
@@ -33,12 +33,54 @@ class DeductionController extends Controller
             'philhealth' => 'deduction.philhealth.index',
             'pagibig' => 'deduction.pagibig.index'
         ];
-        $data = $this->deduction->where('contribution','=',$contribute)->get();
+        $data = $this->deduction->getByContribution($contribute);
      
         return view($direction[$contribute],[
             'data' => $data
         ]);
         
+    }
+
+    public function tax_index()
+    {
+        $contribute = 'tax';
+        $data = $this->deduction->getByContribution($contribute);
+        return view('deduction.tax.index',[
+            'data' => $data
+        ]);
+    }
+
+    public function sss_index()
+    {
+        $contribute = 'sss';
+        $data = $this->deduction->getByContribution($contribute);
+        return view('deduction.sss.index',[
+            'data' => $data
+        ]);
+    }
+
+    public function phil_index()
+    {
+        $contribute = 'philhealth';
+        $data = $this->deduction->getByContribution($contribute);
+        return view('deduction.philhealth.index',[
+            'data' => $data
+        ]);
+    }
+
+    public function pagibig_index()
+    {
+        $contribute = 'pagibig';
+        $data = $this->deduction->getByContribution($contribute);
+        return view('deduction.pagibig.index',[
+            'data' => $data
+        ]);
+    }
+
+    public function delete($id)
+    {
+        $this->deduction->delete($id);
+        return back();
     }
     
 }

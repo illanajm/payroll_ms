@@ -14,8 +14,8 @@ class DeductionRepository extends BaseRepository implements DeductionRepositoryI
         $this->model = $model;
     }
     
-    public function where($attributes)
+    public function getByContribution($contribution)
     {
-        $this->model->where($attributes)->get();
+        return $this->model->where('contribution','=',$contribution)->get();
     }
 }

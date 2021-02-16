@@ -47,7 +47,7 @@
                                     <button class="c-btn c-btn--info has-dropdown dropdown-toggle" id="dropdownMenuButton21" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
                                     <div class="c-dropdown__menu dropdown-menu" aria-labelledby="dropdownMenuButton21" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -155px, 0px); top: 0px; left: 0px; will-change: transform;">
                                         <a class="c-dropdown__item dropdown-item" href="">Update</a>  
-                                        <a class="c-dropdown__item dropdown-item" href="" onclick="return confirm('Are you sure?')">Delete</a>  
+                                        <a class="c-dropdown__item dropdown-item" href="{{URL::route('deduction.delete',$d->id)}}" onclick="return confirm('Are you sure?')">Delete</a>  
                                     </div>
                                 </div>
                             </td>
