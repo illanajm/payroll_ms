@@ -15,7 +15,7 @@
 
             <li class="c-sidebar__item">
                 <a class="c-sidebar__link" href="{{URL::route('dashboard.audit')}}">
-                    <i class="fa fa-home u-mr-xsmall"></i>
+                    <i class="fa fa-chain-broken u-mr-xsmall"></i>
                     Audit Trail
                 </a>
             </li>  
@@ -32,7 +32,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_3" aria-expanded="false" aria-controls="sidebar-submenu_3">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Employees
+                    <i class="fa fa-street-view u-mr-xsmall"></i> Employees
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_3">
                     <li><a class="c-sidebar__link" href="{{URL::route('employee.index')}}">Records</a></li> 
@@ -42,7 +42,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_4" aria-expanded="false" aria-controls="sidebar-submenu_4">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Loans
+                    <i class="fa fa-window-restore u-mr-xsmall"></i> Loans
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_4">
                     <li><a class="c-sidebar__link" href="{{URL::route('loan.index')}}">All loans</a></li> 
@@ -53,7 +53,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_5" aria-expanded="false" aria-controls="sidebar-submenu_5">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Leaves
+                    <i class="fa fa-calendar u-mr-xsmall"></i> Leaves
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_5">
                     <li><a class="c-sidebar__link" href="{{URL::route('leave.index')}}">All leaves</a></li> 
@@ -64,7 +64,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_6" aria-expanded="false" aria-controls="sidebar-submenu_6">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Mandatory Deductions
+                    <i class="fa fa-file-text-o u-mr-xsmall"></i> Mandatory Deductions
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_6">
                     <li><a class="c-sidebar__link" href="{{URL::route('deduction.add')}}">Add New</a></li> 
@@ -77,7 +77,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_7" aria-expanded="false" aria-controls="sidebar-submenu_7">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Timekeeping
+                    <i class="fa fa-clock-o u-mr-xsmall"></i> Timekeeping
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_7">
                     <li><a class="c-sidebar__link" href="{{URL::route('timekeeping.index')}}">Records</a></li> 
@@ -87,7 +87,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_8" aria-expanded="false" aria-controls="sidebar-submenu_8">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Payslips
+                    <i class="fa fa-file-text-o u-mr-xsmall"></i> Payslips
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_8">
                     <li><a class="c-sidebar__link" href="{{URL::route('payslip.index')}}">Records</a></li> 
@@ -97,7 +97,7 @@
 
             <li class="c-sidebar__item has-submenu">
                 <a class="c-sidebar__link" data-toggle="collapse" href="#sidebar-submenu_9" aria-expanded="false" aria-controls="sidebar-submenu_9">
-                    <i class="fa fa-flag-checkered u-mr-xsmall"></i> Settings
+                    <i class="fa fa-cogs u-mr-xsmall"></i> Settings
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_9">
                     <li><a class="c-sidebar__link" href="...">Company Setups</a></li> 
@@ -107,7 +107,7 @@
 
             <li class="c-sidebar__item">
                 <a class="c-sidebar__link" href="...">
-                    <i class="fa fa-home u-mr-xsmall"></i>
+                    <i class="fa fa-sign-in u-mr-xsmall"></i>
                     Logout
                 </a>
             </li>  
