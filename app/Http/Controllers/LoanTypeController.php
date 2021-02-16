@@ -26,6 +26,14 @@ class LoanTypeController extends Controller
         ]);
     }
 
+    public function types()
+    {
+        $loan = $this->loan_type->all();
+        return view('loan.types',[
+            'loan' => $loan
+        ]);
+    }
+
     public function add()
     {
         return view('loan.add');

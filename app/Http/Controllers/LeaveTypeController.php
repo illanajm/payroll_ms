@@ -26,6 +26,14 @@ class LeaveTypeController extends Controller
         ]);
     }
 
+    public function types()
+    {
+        $data = $this->leave_type->all();
+        return view('leave.types',[
+            'leave' => $data
+        ]);
+    }
+
     public function store_form()
     {
         return view('leave.add');
@@ -48,8 +56,8 @@ class LeaveTypeController extends Controller
 
     public function update($id)
     {
-        $this->leave_type->update($id);
-        return Redirect::route('leave.index')->with([
+        $this->leave_type->find($id)->update($this->request->except('_token'));
+        return Redirect::route('leave.types')->with([
           'success' => 'data inserted'
       ]);
     }
@@ -57,7 +65,7 @@ class LeaveTypeController extends Controller
     public function delete($id)
     {
         $this->leave_type->delete($id);
-        return Redirect::route('leave.index')->with([
+        return Redirect::route('leave.types')->with([
             'success' => 'data inserted'
         ]);
     }

@@ -10,4 +10,9 @@ class dashboardController extends Controller
     {
         return view('dashboard.main');
     }
+
+    public function audit()
+    {
+        return view('dashboard.audit');
+    }
 }
