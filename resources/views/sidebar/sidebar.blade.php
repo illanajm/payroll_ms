@@ -9,7 +9,14 @@
             <li class="c-sidebar__item active">
                 <a class="c-sidebar__link" href="...">
                     <i class="fa fa-home u-mr-xsmall"></i>
-                    Single menu
+                    Dashboard
+                </a>
+            </li>  
+
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link" href="...">
+                    <i class="fa fa-home u-mr-xsmall"></i>
+                    Audit Trail
                 </a>
             </li>  
                 

@@ -1,11 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\dashboardController;
-
-
-
+use Illuminate\Support\Facades\Route; 
+ 
 foreach(glob(__DIR__. "/modules/*.php") as $filename){
     include $filename;
 }

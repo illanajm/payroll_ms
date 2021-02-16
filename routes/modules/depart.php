@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
+
+=======
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DepartmentController;
 
@@ -13,3 +16,4 @@ Route::group(['prefix' => '/department'],function(){
     Route::post('/update/save/{id}',[DepartmentController::class,'update'])->name('department.update');
     Route::get('/{id}',[DepartmentController::class,'delete'])->name('department.delete');
 });
+>>>>>>> cd7aec02dc5c8f0a0d766c60e5da624f0cea024e
