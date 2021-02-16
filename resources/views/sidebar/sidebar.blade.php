@@ -67,11 +67,11 @@
                     <i class="fa fa-flag-checkered u-mr-xsmall"></i> Mandatory Deductions
                 </a>
                 <ul class="c-sidebar__submenu collapse" id="sidebar-submenu_6">
-                    <li><a class="c-sidebar__link" href="...">Add New</a></li> 
-                    <li><a class="c-sidebar__link" href="...">Tax Table</a></li>
-                    <li><a class="c-sidebar__link" href="...">SSS Table</a></li>
-                    <li><a class="c-sidebar__link" href="...">Philhealth Table</a></li>
-                    <li><a class="c-sidebar__link" href="...">Pagibig Table</a></li>                                          
+                    <li><a class="c-sidebar__link" href="{{URL::route('deduction.add')}}">Add New</a></li> 
+                    <li><a class="c-sidebar__link" href="{{URL::route('tax.index')}}">Tax Table</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('sss.index')}}">SSS Table</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('philhealth.index')}}">Philhealth Table</a></li>
+                    <li><a class="c-sidebar__link" href="{{URL::route('pagibig.index')}}">Pagibig Table</a></li>                                          
                 </ul>
             </li>
 
