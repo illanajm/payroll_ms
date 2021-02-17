@@ -36,7 +36,7 @@
                                     <div class="c-dropdown dropdown">
                                         <button class="c-btn c-btn--secondary has-dropdown dropdown-toggle" id="dropdownMenuButton21" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>   
                                         <div class="c-dropdown__menu dropdown-menu" aria-labelledby="dropdownMenuButton21">
-                                            <a class="c-dropdown__item dropdown-item" href="...">View Record</a> 
+                                            <a class="c-dropdown__item dropdown-item" href="{{URL::route('timekeeping.view')}}">View Record</a> 
                                             <a class="confirm c-dropdown__item dropdown-item" href="...">Delete</a>
                                         </div>
                                     </div>

@@ -15,4 +15,9 @@ class TimekeepingController extends Controller
     {
         return view('timekeeping.add');
     }
+
+    public function view()
+    {
+        return view('timekeeping.view');
+    }
 }
