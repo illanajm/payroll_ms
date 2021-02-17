@@ -40,21 +40,36 @@
                         </thead>
 
                         <tbody>
-                            @foreach($leave as $data)
-                             <tr class="c-table__row">             
-                            <td class="c-table__cell"><b>{{$data->id}}</b></td>  
-                            <td class="c-table__cell">{{$data->name}}</td>  
-                            <td class="c-table__cell">{{$data->description}}</td>
-                            <td class="c-table__cell">{{$data->day}}</td>
-                            <td class="c-table__cell">{{$data->pay}}</td>   
-                            <td class="c-table__cell">2 days ago</td>  
-                            <td class="c-table__cell">2 days ago</td>  
-                            <td class="c-table__cell">
-                            <div class="c-dropdown dropdown">
-                                    <button class="c-btn c-btn--info has-dropdown dropdown-toggle" id="dropdownMenuButton21" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
-                                    <div class="c-dropdown__menu dropdown-menu" aria-labelledby="dropdownMenuButton21" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -155px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                        <a class="c-dropdown__item dropdown-item" href="{{URL::route('leave.update_form',$data->id)}}">Update</a>  
-                                        <a class="c-dropdown__item dropdown-item" href="{{URL::route('leave.delete',$data->id)}}" onclick="return confirm('Are you sure?')">Delete</a>  
+                            <tr class="c-table__row">
+                                <td class="c-table__cell c-table__cell--img o-media">
+
+                                    <div class="o-media__img u-mr-xsmall"> 
+                                        <img src="" style="width:56px;"> 
+                                    </div>
+
+                                    <div class="o-media__body">
+                                        f_name 
+                                        m_name 
+                                        l_name
+                                        <span class="u-block u-text-mute u-text-xsmall">Admin</span>
+                                    </div>
+                                </td>
+            
+                                <td class="c-table__cell">CYAN2021000006</td>  
+                                <td class="c-table__cell">Maternity Leave</td>   
+                                <td class="c-table__cell">Feb 16, 2021</td>   
+                                <td class="c-table__cell">Feb 17, 2021</td>   
+                                <td class="c-table__cell">
+                                    <span class="c-badge c-badge--warning">On-going</span> 
+                                </td>  
+
+                                <td class="c-table__cell">
+                                    <div class="c-dropdown dropdown">
+                                        <button class="c-btn c-btn--secondary has-dropdown dropdown-toggle" id="dropdownMenuButton21" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Actions</button>
+                                        <div class="c-dropdown__menu dropdown-menu" aria-labelledby="dropdownMenuButton21">
+                                            <a class="c-dropdown__item dropdown-item" href="...">Update</a>  
+                                            <a class="confirm c-dropdown__item dropdown-item" href="...">Delete</a>
+                                        </div>
                                     </div>
                                 </td>  
                             </tr> 

@@ -25,7 +25,7 @@
                 </div> 
             </div> 
             <div class="col-lg-12 col-md-12" style="padding: 2%;"> 
-                <form action="{{URL::route('leave.store')}}" method="post">
+                <form action="{{URL::route('leave.update',$data->id)}}" method="post">
                     @csrf 
                     <div class="row">
                         <div class="col-sm-4 col-md-4">
