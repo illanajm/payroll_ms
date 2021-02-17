@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Redirect;
 use App\Models\LoanType;
 use Illuminate\Http\Request;
-use Redirect;
+use App\Repositories\Interfaces\LoanRepositoryInterface;
 
 class LoanTypeController extends Controller
 {
     protected $loan_type;
     protected $request;
 
-    public function __construct(LoanType $loan_type, Request $request)
+    public function __construct(LoanRepositoryInterface $loan_type, Request $request)
     {
         $this->loan_type = $loan_type;
         $this->request = $request;
@@ -61,11 +62,10 @@ class LoanTypeController extends Controller
 
     public function delete($id)
     {
-        $this->loan_type->findorfail($id)->delete();
+        $this->loan_type->delete($id);
         return Redirect::route('loan.index')->with([
             'success' => 'data deleted'
         ]);
     }
-
 
 }

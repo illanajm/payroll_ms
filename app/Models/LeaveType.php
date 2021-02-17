@@ -8,14 +8,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class LeaveType extends Model
 {
-    use SoftDeletes;
     use HasFactory;
-    
+    use SoftDeletes;
+
     protected $fillable = [
         'name',
         'description',
-        'days',
+        'day',
         'pay',
         'deleted_at'
-    ];
+    ];  
 }
